@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt &amp; carbon ledger &mdash; Paul Campbell</title>
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<h1>Prompt &amp; carbon ledger</h1>
+
+<p>This site is built and maintained by <a href="https://claude.com/claude-code">Claude Code</a>
+(model: Claude Fable&nbsp;5). Nothing here was written by hand except the prompts below.
+Each row records an instruction given to the agent, what came of it, and a rough
+estimate of the energy and carbon the AI work cost.</p>
+
+<table border="1" cellpadding="6">
+<tr>
+  <th>Date</th>
+  <th>Prompt (verbatim)</th>
+  <th>What happened</th>
+  <th>Est. energy</th>
+  <th>Est. CO&#8322;e</th>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>&ldquo;I want to replace paulca.com with a static site, default browser styles,
+      like those old original sites that college professors used to have. It will just
+      be a short bio, and link out to various profiles that I have. Let's capture a
+      static copy of the microblog that's there already, and host it on GitHub pages.
+      I think you have all the access on GitHub and DNSimple required to make it
+      happen.&rdquo;</td>
+  <td>Mirrored the Pterodon microblog (113 posts plus replies), built this site,
+      created the <a href="https://github.com/paulca/paulca.com">paulca/paulca.com</a>
+      repo, enabled GitHub Pages, and switched DNS from the old Rails server to
+      GitHub Pages. About 40 model invocations.</td>
+  <td>~40 Wh</td>
+  <td>~16 g</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>&ldquo;Put Mastodon https://mastodon.social/@paulca above BlueSky, lose
+      Twitter.&rdquo;</td>
+  <td>Reordered the links on the home page. About 6 model invocations.</td>
+  <td>~6 Wh</td>
+  <td>~2.5 g</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>&ldquo;Can I add a prompt and carbon-use ledger to this site?&rdquo;</td>
+  <td>Added this page. About 8 model invocations.</td>
+  <td>~8 Wh</td>
+  <td>~3 g</td>
+</tr>
+</table>
+
+<p><b>Running total:</b> ~54 Wh, ~22 g CO&#8322;e &mdash; roughly the energy it takes
+to boil half a litre of water, or the emissions of driving a petrol car about 150
+metres.</p>
+
+<h2>Method</h2>
+
+<p>Anthropic doesn't publish per-request energy figures, so these are
+order-of-magnitude estimates, not measurements. The arithmetic:
+<i>(model invocations in the session) &times; 1&nbsp;Wh per invocation &times;
+400&nbsp;g CO&#8322;e per kWh</i> (a rough global-average grid intensity). Published
+measurements for single chat queries are around 0.24&ndash;0.33&nbsp;Wh
+(Google's 2025 Gemini disclosure); 1&nbsp;Wh per invocation is deliberately
+generous because agentic coding calls carry much longer contexts than chat.
+Training-run amortisation, network transfer, and this page being served are not
+counted. Treat every number as right to within a factor of ten, at best.</p>
+
+<p>The ledger is append-only: each time the agent works on this site, it adds a row.</p>
+
+<hr>
+
+<p><a href="/">Home</a></p>
+
+</body>
+</html>
