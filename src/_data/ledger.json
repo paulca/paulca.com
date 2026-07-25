@@ -11,6 +11,14 @@
     },
     {
       "date": "July 25, 2026",
+      "prompt_html": "“Maybe we should add an 80ch limit so that it's a bit easier to read?”",
+      "outcome_html": "Put a single <code>max-width:80ch</code> inline style on the post template's <code>&lt;article&gt;</code> — a line-length cap, no centering — and updated <code>AGENTS.md</code> to match.",
+      "wh": 4,
+      "co2_g": 1.6,
+      "comparison": "Ten minutes of a 25 W monitor"
+    },
+    {
+      "date": "July 25, 2026",
       "prompt_html": "“Lose it. The pi post worked great.” — “it” being the one inline style left on the post template.",
       "outcome_html": "Removed the <code>style</code> attribute from the <code>&lt;article&gt;</code> in the post template. Blog posts now render with browser default styles only, like everything else. Also backfilled the entry below.",
       "wh": 4,
