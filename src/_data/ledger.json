@@ -11,6 +11,22 @@
     },
     {
       "date": "July 25, 2026",
+      "prompt_html": "“Lose it. The pi post worked great.” — “it” being the one inline style left on the post template.",
+      "outcome_html": "Removed the <code>style</code> attribute from the <code>&lt;article&gt;</code> in the post template. Blog posts now render with browser default styles only, like everything else. Also backfilled the entry below.",
+      "wh": 4,
+      "co2_g": 1.6,
+      "comparison": "Three minutes of a 75 W ceiling fan"
+    },
+    {
+      "date": "July 25, 2026",
+      "prompt_html": "(Logged after the fact; the exact wording wasn't recorded.) Paul asked the pi agent to fix two typos in the first blog post.",
+      "outcome_html": "The local GPT‑OSS model's first solo change: “ben” → “been” and “closet” → “closest” (plus an added “a”) in the blog post, rebuilt and pushed. It forgot to log itself here, so Claude added this entry afterwards.",
+      "wh": 2,
+      "co2_g": 0.8,
+      "comparison": "Two minutes of an RTX 3090 idling"
+    },
+    {
+      "date": "July 25, 2026",
       "prompt_html": "“I want to set up a blog and an FAQ on this site. I want to be able to add to the blog using gpt-oss in the pi harness, so I want to end up with instructions that will allow it to: add a blog post in md format, make any tweaks, build the site, open and merge a PR on GitHub, update the prompt and carbon ledger. I think using 11ty would make all this easier, but building locally rather than build on push.” — plus follow-ups on keeping posts style-free and wording this ledger's introduction.",
       "outcome_html": "Rebuilt the site on <a href=\"https://www.11ty.dev/\">Eleventy</a>: blog posts are now Markdown files in <code>src/blog/</code>, a FAQ lives at <a href=\"/faq/\">/faq/</a>, this ledger is generated from a JSON data file with the running total computed at build time, and <code>AGENTS.md</code> gives any agent step-by-step instructions for publishing a post, opening and merging the PR, and logging it here. The built site is committed to <code>docs/</code>; every old URL still works.",
       "wh": 40,
