@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: FAQ
+permalink: /faq/
+---
+<h1>Frequently asked questions</h1>
+
+{%- for e in collections.faq %}
+<h2>{{ e.data.question }}</h2>
+{{ e.templateContent | safe }}
+{%- endfor %}
+
+<hr>
+
+<p><a href="/">← Home</a></p>

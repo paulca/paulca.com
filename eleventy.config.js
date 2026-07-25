@@ -39,6 +39,13 @@ module.exports = function (eleventyConfig) {
     entries.reduce((sum, e) => sum + (e.data[key] ?? 0), 0)
   );
 
+  // FAQ entries, ordered by their two-digit filename prefix.
+  eleventyConfig.addCollection("faq", (api) =>
+    api
+      .getFilteredByGlob("src/faq/*.md")
+      .sort((a, b) => a.inputPath.localeCompare(b.inputPath))
+  );
+
   eleventyConfig.addGlobalData("buildDate", () => new Date());
 
   return {

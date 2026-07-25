@@ -23,7 +23,9 @@ Follow the recipes below exactly.
 - `src/ai.njk` — the ledger page template. The table and running total are
   generated from the files in `src/ledger/`; you never edit this file to add
   an entry.
-- `src/faq.md` — the FAQ.
+- `src/faq/*.md` — the FAQ at `/faq/`, one Markdown file per question.
+  `src/faq.njk` is the page template that assembles them in filename order;
+  you never edit it to add a question.
 - `src/posts/`, `src/microblog/`, `src/assets/`, `src/activity_pub/` — frozen
   archives of the old site, copied into `docs/` unchanged. Never edit these.
 
@@ -121,6 +123,31 @@ Then rebuild and confirm your entry made it into the page:
 
     npm run build
     grep "the comparison text from your new entry" docs/ai.html
+
+## Recipe: add an FAQ entry
+
+Each question is one Markdown file in `src/faq/`, and the page at `/faq/`
+assembles them in filename order. Create a new file — never renumber or edit
+existing ones unless Paul asks — named `NN-slug.md`: `NN` is a two-digit
+number one higher than the highest already in `src/faq/` (run `ls src/faq/`
+to check), and the slug is two or three words from the question. Example:
+`06-what-model-runs-this.md`.
+
+    ---
+    question: >-
+      The question, phrased the way a reader would ask it?
+    ---
+    The answer, in Markdown. Keep it short and factual, write about Paul in
+    the third person, and only state things that are true of this site.
+
+The `question` text must stay indented under `question: >-` exactly as in
+the example. Then rebuild and confirm the question shows up:
+
+    npm run build
+    grep "the question text" docs/faq/index.html
+
+An FAQ change is a site change like any other: add a ledger entry, then
+commit and push as usual.
 
 ## Recipe: commit and push
 
