@@ -38,6 +38,22 @@ first.</p>
 </tr>
 <tr>
   <td>July 25, 2026</td>
+  <td>“Lose it. The pi post worked great.” — “it” being the one inline style left on the post template.</td>
+  <td>Removed the <code>style</code> attribute from the <code>&lt;article&gt;</code> in the post template. Blog posts now render with browser default styles only, like everything else. Also backfilled the entry below.</td>
+  <td>~4 Wh</td>
+  <td>~1.6 g</td>
+  <td>Three minutes of a 75 W ceiling fan</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
+  <td>(Logged after the fact; the exact wording wasn't recorded.) Paul asked the pi agent to fix two typos in the first blog post.</td>
+  <td>The local GPT‑OSS model's first solo change: “ben” → “been” and “closet” → “closest” (plus an added “a”) in the blog post, rebuilt and pushed. It forgot to log itself here, so Claude added this entry afterwards.</td>
+  <td>~2 Wh</td>
+  <td>~0.8 g</td>
+  <td>Two minutes of an RTX 3090 idling</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
   <td>“I want to set up a blog and an FAQ on this site. I want to be able to add to the blog using gpt-oss in the pi harness, so I want to end up with instructions that will allow it to: add a blog post in md format, make any tweaks, build the site, open and merge a PR on GitHub, update the prompt and carbon ledger. I think using 11ty would make all this easier, but building locally rather than build on push.” — plus follow-ups on keeping posts style-free and wording this ledger's introduction.</td>
   <td>Rebuilt the site on <a href="https://www.11ty.dev/">Eleventy</a>: blog posts are now Markdown files in <code>src/blog/</code>, a FAQ lives at <a href="/faq/">/faq/</a>, this ledger is generated from a JSON data file with the running total computed at build time, and <code>AGENTS.md</code> gives any agent step-by-step instructions for publishing a post, opening and merging the PR, and logging it here. The built site is committed to <code>docs/</code>; every old URL still works.</td>
   <td>~40 Wh</td>
@@ -126,8 +142,8 @@ first.</p>
 </tr>
 </table>
 
-<p><b>Running total:</b> ~150 Wh,
-~60 g CO&#8322;e &mdash;
+<p><b>Running total:</b> ~156 Wh,
+~62 g CO&#8322;e &mdash;
 about the energy it takes to boil a litre and a half of water, or the emissions of driving a petrol car about 350 metres.</p>
 
 <h2>Method</h2>
