@@ -39,20 +39,23 @@ Follow the recipes below exactly.
 4. **The ledger is append-only.** Add a new file under `src/ledger/`; never
    edit or delete the existing entry files.
 5. **Every session that changes the site also adds a ledger entry**, in the
-   same pull request as the change.
+   same push as the change. This applies to every change you make, with any
+   tool: a model editing files with its own edit tool is AI work, full stop.
+   There is no "hand-edit" exemption for your own actions — the only changes
+   that skip the ledger are ones Paul makes himself, in his own editor,
+   without prompting any model.
 6. **Always rebuild before committing**, and commit `src/` and `docs/`
    together.
 
 ## Recipe: add a blog post
 
-1. Start from a fresh branch:
+1. Start up to date, on `main`:
 
        git checkout main
        git pull
-       git checkout -b blog/<slug>
 
-   Pick `<slug>` from the post title: lowercase, words separated by hyphens,
-   no punctuation (e.g. "My Great Post!" → `my-great-post`).
+   Pick a `<slug>` from the post title: lowercase, words separated by
+   hyphens, no punctuation (e.g. "My Great Post!" → `my-great-post`).
 
 2. Create `src/blog/<slug>.md`:
 
@@ -75,13 +78,13 @@ Follow the recipes below exactly.
 
 4. Add the ledger entry (see recipe below) and rebuild.
 
-5. Open and merge the pull request (see recipe below).
+5. Commit and push (see recipe below).
 
 ## Recipe: make a tweak
 
-Same flow as a post, with an edit instead of a new file: branch off `main`
-(name it `tweak/<short-description>`), edit the relevant file under `src/`,
-run `npm run build`, add a ledger entry, then PR and merge.
+Same flow as a post, with an edit instead of a new file: pull `main`, edit
+the relevant file under `src/`, run `npm run build`, add a ledger entry,
+then commit and push.
 
 ## Recipe: update the prompt & carbon ledger
 
@@ -119,22 +122,23 @@ Then rebuild and confirm your entry made it into the page:
     npm run build
     grep "the comparison text from your new entry" docs/ai.html
 
-## Recipe: open and merge the PR
+## Recipe: commit and push
+
+Work directly on `main` — no branches, no pull requests. Paul is the only
+human in the repo and reviews the live site.
 
     git add -A
     git commit -m "Add blog post: <title>"        # or a one-line description of the tweak
-    git push -u origin <branch-name>
-    gh pr create --fill
-    gh pr merge --squash --delete-branch
+    git push origin main
 
 Then verify the live site (GitHub Pages takes a minute or two to deploy):
 
     curl -sL https://paulca.com/blog/<slug>/ | grep "<h1>"
 
-If the merge fails because the branch is behind `main`, run
-`git fetch origin && git merge origin/main`, rebuild, push, and try again.
+If the push is rejected because the remote has newer commits, run
+`git pull --rebase`, run `npm run build` again, and push again.
 
-## Checklist before merging
+## Checklist before pushing
 
 - [ ] `npm run build` ran without errors after the last edit to `src/`
 - [ ] The change shows up in `docs/`

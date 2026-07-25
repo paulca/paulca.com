@@ -43,6 +43,34 @@ leaves home and energy per prompt is roughly 2 Wh.</p>
 <tr>
   <td>July 25, 2026</td>
   <td>Claude Fable 5</td>
+  <td>“Yeah, do all of those. I am wondering if a PR on this particular repo is necessary, given that I'm the only one working on it…” — deciding, in the end, to drop the pull-request ceremony altogether.</td>
+  <td><p>Backfilled the entry below, closed the “hand-edit” loophole in <code>AGENTS.md</code>
+(a model editing files with its own tools is AI work, full stop), and
+simplified the workflow: agents now commit straight to <code>main</code> — no branches,
+no pull requests — since builds are verified locally and Paul reviews the
+live site anyway.</p>
+</td>
+  <td>~8 Wh</td>
+  <td>~3.2 g</td>
+  <td>Two hours of a 4 W nightlight</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
+  <td>GPT-OSS (RTX 3090)</td>
+  <td>(Logged after the fact; the exact wording wasn't recorded.) Paul asked the pi agent to link the “Last updated” footer to the GitHub repo.</td>
+  <td><p>GPT‑OSS linked the homepage footer to
+<a href="https://github.com/paulca/paulca.com">github.com/paulca/paulca.com</a>,
+correctly editing both source and built output — then told Paul the change
+was a “hand-edit” that didn't need a ledger entry. It wasn't, and it did;
+Claude logged it here afterwards.</p>
+</td>
+  <td>~2 Wh</td>
+  <td>~0.8 g</td>
+  <td>An hour of a smart speaker on standby</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
+  <td>Claude Fable 5</td>
   <td>“Can you update the prompt ledger to include the model, and update instructions for pi to include the model if it adds to it too? Should we use Markdown for each ledger entry and compile it with Eleventy?”</td>
   <td><p>Added the Model column, and yes: the ledger is now one small Markdown file
 per entry in <code>src/ledger/</code>, compiled by Eleventy. Appending an entry can no
@@ -218,8 +246,8 @@ Pages. About 40 model invocations.</p>
 </tr>
 </table>
 
-<p><b>Running total:</b> ~170 Wh,
-~68 g CO&#8322;e &mdash;
+<p><b>Running total:</b> ~180 Wh,
+~72 g CO&#8322;e &mdash;
 about the energy it takes to boil a litre and three-quarters of water, or the emissions of driving a petrol car about 400 metres.</p>
 
 <h2>Method</h2>

@@ -33,8 +33,8 @@ A microblog ran at paulca.com until July 2026. It's preserved as a
 
 Paul writes a post in a text editor and hands it to a local model, which saves
 it as a Markdown file, builds the site with [Eleventy](https://www.11ty.dev/),
-opens a pull request on GitHub, merges it, and adds a row to the ledger.
-GitHub Pages serves the result.
+adds a row to the ledger, and pushes the result to GitHub, where GitHub Pages
+serves it.
 
 ---
 
