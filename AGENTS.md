@@ -27,9 +27,9 @@ Follow the recipes below exactly.
 ## Rules
 
 1. **No styling.** No CSS files, no `<style>` blocks, no new inline styles, no
-   classes, no JavaScript. Semantic HTML and Markdown only. The one inline
-   style on `<article>` in `post.njk` is the only styling on the site; leave
-   it alone.
+   classes, no JavaScript. Semantic HTML and Markdown only. The single
+   `max-width:80ch` inline style on `<article>` in `post.njk` (a line-length
+   cap for readability) is the only styling on the site; leave it alone.
 2. **Never edit anything in `docs/` by hand.** Change `src/`, then rebuild.
 3. **Post Paul's words verbatim.** When Paul gives you text for a blog post,
    do not rewrite, correct, or embellish it.
