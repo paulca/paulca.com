@@ -9,33 +9,35 @@ permalink: /ai.html
 <a href="https://claude.com/claude-code">Claude Code</a> (model: Claude
 Fable&nbsp;5). The plan for ongoing maintenance is to use open-source models
 running on private hardware. Nothing here was written by hand except the
-prompts below. Each row records an instruction given to an agent, what came of
-it, and a rough estimate of the energy and carbon the AI work cost. Newest
-first.</p>
+prompts below. Each row records an instruction given to an agent, which model
+did the work, what came of it, and a rough estimate of the energy and carbon
+the AI work cost. Newest first.</p>
 
 <table border="1" cellpadding="6">
 <tr>
   <th>Date</th>
+  <th>Model</th>
   <th>Prompt (verbatim)</th>
   <th>What happened</th>
   <th>Est. energy</th>
   <th>Est. CO&#8322;e</th>
   <th>Roughly equivalent to</th>
 </tr>
-{%- for e in ledger.entries %}
+{%- for e in collections.ledger | reverse %}
 <tr>
-  <td>{{ e.date }}</td>
-  <td>{{ e.prompt_html | safe }}</td>
-  <td>{{ e.outcome_html | safe }}</td>
-  <td>~{{ e.wh }} Wh</td>
-  <td>~{{ e.co2_g }} g</td>
-  <td>{{ e.comparison }}</td>
+  <td>{{ e.date | longDate }}</td>
+  <td>{{ e.data.model }}</td>
+  <td>{{ e.data.prompt | mdInline | safe }}</td>
+  <td>{{ e.templateContent | safe }}</td>
+  <td>~{{ e.data.wh }} Wh</td>
+  <td>~{{ e.data.co2_g }} g</td>
+  <td>{{ e.data.comparison }}</td>
 </tr>
 {%- endfor %}
 </table>
 
-<p><b>Running total:</b> ~{{ ledger.entries | total("wh") }} Wh,
-~{{ ledger.entries | total("co2_g") | round }} g CO&#8322;e &mdash;
+<p><b>Running total:</b> ~{{ collections.ledger | total("wh") }} Wh,
+~{{ collections.ledger | total("co2_g") | round }} g CO&#8322;e &mdash;
 {{ ledger.totals_comparison }}.</p>
 
 <h2>Method</h2>
@@ -53,9 +55,9 @@ work. Training-run amortisation, network transfer, and this page being served
 are not counted. Treat every number as right to within a factor of ten, at
 best.</p>
 
-<p>The ledger is append-only: each time an agent works on this site, it adds an
-entry to the top of <code>src/_data/ledger.json</code> and rebuilds; this page
-and the running total are generated from that file.</p>
+<p>The ledger is append-only: each time an agent works on this site, it adds a
+Markdown file to <code>src/ledger/</code> and rebuilds; this page and the
+running total are generated from those files.</p>
 
 <hr>
 
