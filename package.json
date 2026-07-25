@@ -1,0 +1,13 @@
+{
+  "name": "paulca.com",
+  "private": true,
+  "description": "Static personal site for paulca.com, built with Eleventy, hosted on GitHub Pages.",
+  "type": "commonjs",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

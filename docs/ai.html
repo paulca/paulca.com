@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt &amp; carbon ledger &mdash; Paul Campbell</title>
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<h1>Prompt &amp; carbon ledger</h1>
+
+<p>The initial version of this site was set up by
+<a href="https://claude.com/claude-code">Claude Code</a> (model: Claude
+Fable&nbsp;5). The plan for ongoing maintenance is to use open-source models
+running on private hardware. Nothing here was written by hand except the
+prompts below. Each row records an instruction given to an agent, what came of
+it, and a rough estimate of the energy and carbon the AI work cost. Newest
+first.</p>
+
+<table border="1" cellpadding="6">
+<tr>
+  <th>Date</th>
+  <th>Prompt (verbatim)</th>
+  <th>What happened</th>
+  <th>Est. energy</th>
+  <th>Est. CO&#8322;e</th>
+  <th>Roughly equivalent to</th>
+</tr>
+<tr>
+  <td>July 26, 2026</td>
+  <td>“Switching from Claude to GPT-OSS on my gaming rig in the home office.”</td>
+  <td>Switched to a local open‑source LLM running on an RTX 3090 GPU. No data leaves home and energy per prompt is roughly 2 Wh.</td>
+  <td>~2 Wh</td>
+  <td>~0.8 g</td>
+  <td>A half-hour of a 5 W LED bulb</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
+  <td>“I want to set up a blog and an FAQ on this site. I want to be able to add to the blog using gpt-oss in the pi harness, so I want to end up with instructions that will allow it to: add a blog post in md format, make any tweaks, build the site, open and merge a PR on GitHub, update the prompt and carbon ledger. I think using 11ty would make all this easier, but building locally rather than build on push.” — plus follow-ups on keeping posts style-free and wording this ledger's introduction.</td>
+  <td>Rebuilt the site on <a href="https://www.11ty.dev/">Eleventy</a>: blog posts are now Markdown files in <code>src/blog/</code>, a FAQ lives at <a href="/faq/">/faq/</a>, this ledger is generated from a JSON data file with the running total computed at build time, and <code>AGENTS.md</code> gives any agent step-by-step instructions for publishing a post, opening and merging the PR, and logging it here. The built site is committed to <code>docs/</code>; every old URL still works.</td>
+  <td>~40 Wh</td>
+  <td>~16 g</td>
+  <td>An hour of a 40 W desk fan</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
+  <td>“Remove all the formatting. Just use semantic HTML tags. I don't want any formatting.”</td>
+  <td>Stripped the blog post of every CSS class, stylesheet link, Stimulus controller, and &lt;em&gt;/&lt;strong&gt; formatting — just bare <code>&lt;article&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>.</td>
+  <td>~5 Wh</td>
+  <td>~2 g</td>
+  <td>Four minutes of a smartphone charging</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
+  <td>“Can the post get a back link to the homepage?”</td>
+  <td>Added a plain <code>&lt;nav&gt;</code> with a “← Home” anchor at the top of the post.</td>
+  <td>~3 Wh</td>
+  <td>~1 g</td>
+  <td>Ten seconds of an e-bike motor</td>
+</tr>
+<tr>
+  <td>July 25, 2026</td>
+  <td>“Let's add a "blog post" to the "Writing"” — and I wrote the wording.</td>
+  <td>Publishing Paul's first proper blog post: “Using an LLM ‘off-the-grid’”. Also added a link under the Writing section on the index page. <i>(Committed as <a href="https://github.com/paulca/paulca.com/commit/aa30a29">aa30a29</a>)</i></td>
+  <td>~15 Wh</td>
+  <td>~6 g</td>
+  <td>A full phone charge, then a little more</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>“Prompts should be sorted bottom up not top down”</td>
+  <td>Reversed the table: newest entries now sit at the top. About 5 model invocations.</td>
+  <td>~5 Wh</td>
+  <td>~2 g</td>
+  <td>Ten minutes of a 30 W laptop</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>“ALong with Est. energy and Est. CO₂e, can we have a column that does a random comparison like the ‘boiling water’ comparison?”</td>
+  <td>Added this column. About 6 model invocations.</td>
+  <td>~6 Wh</td>
+  <td>~2.5 g</td>
+  <td>45 minutes of a home Wi-Fi router</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>Quoting this page's method section — “&gt; Anthropic doesn't publish per-request energy figures” — “Anthropic, in their cowardice, doesn't”.</td>
+  <td>Sharpened the editorial line below. About 5 model invocations.</td>
+  <td>~5 Wh</td>
+  <td>~2 g</td>
+  <td>Half a kilometre on an e-bike</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>Four short follow-ups while waiting on the HTTPS certificate, ending with “Oh, it's done”.</td>
+  <td>Pointed Paul at the GitHub Pages settings page (he pressed “Check”, which unstuck certificate provisioning), supplied DNS verification commands, then enabled HTTPS enforcement and verified every URL against the Pages edge. About 15 model invocations.</td>
+  <td>~15 Wh</td>
+  <td>~6 g</td>
+  <td>One full phone charge</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>“Can I add a prompt and carbon-use ledger to this site?”</td>
+  <td>Added this page. About 8 model invocations.</td>
+  <td>~8 Wh</td>
+  <td>~3 g</td>
+  <td>35 seconds of an 800 W microwave</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>“Put Mastodon https://mastodon.social/@paulca above BlueSky, lose Twitter.”</td>
+  <td>Reordered the links on the home page. About 6 model invocations.</td>
+  <td>~6 Wh</td>
+  <td>~2.5 g</td>
+  <td>An hour of a 6 W LED bulb</td>
+</tr>
+<tr>
+  <td>July 21, 2026</td>
+  <td>“I want to replace paulca.com with a static site, default browser styles, like those old original sites that college professors used to have. It will just be a short bio, and link out to various profiles that I have. Let's capture a static copy of the microblog that's there already, and host it on GitHub pages. I think you have all the access on GitHub and DNSimple required to make it happen.”</td>
+  <td>Mirrored the Pterodon microblog (113 posts plus replies), built this site, created the <a href="https://github.com/paulca/paulca.com">paulca/paulca.com</a> repo, enabled GitHub Pages, and switched DNS from the old Rails server to GitHub Pages. About 40 model invocations.</td>
+  <td>~40 Wh</td>
+  <td>~16 g</td>
+  <td>Charging a phone from flat, three times over</td>
+</tr>
+</table>
+
+<p><b>Running total:</b> ~150 Wh,
+~60 g CO&#8322;e &mdash;
+about the energy it takes to boil a litre and a half of water, or the emissions of driving a petrol car about 350 metres.</p>
+
+<h2>Method</h2>
+
+<p>Anthropic, in their cowardice, doesn't publish per-request energy figures, so these are
+order-of-magnitude estimates, not measurements. The arithmetic:
+<i>(model invocations in the session) &times; 1&nbsp;Wh per invocation &times;
+400&nbsp;g CO&#8322;e per kWh</i> (a rough global-average grid intensity). Published
+measurements for single chat queries are around 0.24&ndash;0.33&nbsp;Wh
+(Google's 2025 Gemini disclosure); 1&nbsp;Wh per invocation is deliberately
+generous because agentic coding calls carry much longer contexts than chat.
+For open-source models running on local hardware, the estimate is
+~2&nbsp;Wh per prompt instead, based on the power draw of the GPU doing the
+work. Training-run amortisation, network transfer, and this page being served
+are not counted. Treat every number as right to within a factor of ten, at
+best.</p>
+
+<p>The ledger is append-only: each time an agent works on this site, it adds an
+entry to the top of <code>src/_data/ledger.json</code> and rebuilds; this page
+and the running total are generated from that file.</p>
+
+<hr>
+
+<p><a href="/">Home</a></p>
+
+
+</body>
+</html>
