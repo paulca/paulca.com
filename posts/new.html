@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using an LLM "off-the-grid"</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="{{csrf-token}}" />
+    
+
+    <meta property="og:site_name" content="Paul Campbell">
+      <meta property="og:image" content="https://paulca.com/assets/paul-2024-compressed.png">
+
+      <meta property="og:title" content="Using an LLM &quot;off-the-grid&quot;">
+  <meta property="og:description" content="From the moment that OpenAI launched, I was very curious. I had met Greg Brockman a few years before and he had given me a lot of time and attention...">
+  <meta property="og:url" content="https://paulca.com/posts/new">
+  <meta property="og:type" content="article">
+    <meta property="og:image" content="https://paulca.com/assets/paul-2024-compressed.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="From the moment that OpenAI launched, I was very curious. I had met Greg Brockman a few years before and he had given me a lot of time and attention...">
+
+
+
+    <link rel="icon" href="../icon.png" type="image/png">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../icon.png">
+
+    <link rel="stylesheet" href="../assets/app-49941149.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/application-36869851.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/buttons-146bdf02.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/colors-d55b2cf3.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/flash-fcfc9fa4.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/form-ebe5847c.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/post-b60e19a2.css" data-turbo-track="reload" />
+<link rel="stylesheet" href="../assets/post_box-7a0798b0.css" data-turbo-track="reload" />
+
+    <script type="module">import "application"</script>
+  </head>
+
+  <body>
+    <div class="app">
+      <nav>
+        <div>
+          <a href="../index.html">Home</a>
+        </div>
+
+      </nav>
+
+      <main>
+        
+
+<article class="post">
+  <header>
+      <img class="avatar-small" width="50" height="50" style="border-radius: 50%; object-fit: cover" src="../assets/paul-2024-compressed.png" />
+    <span>@paul</span>
+    <small>July 25, 2026, 8:39pm</small>
+  </header>
+  <main>
+    <p>From the moment that OpenAI launched, I was very curious. I had met Greg Brockman a few years before and he had given me a lot of time and attention. He had reached out to me, not the other way around, and we had a delightful conversation about the early history of Stripe.</p><p>When ChatGPT launched, I was naturally curious, and very excited about it. I, along with the rest of the world, got a little bit caught up in the hype about the capabilities of these new AI systems, and certainly enjoyed typing things into the box and it responding in a human-like fashion.</p><p>A few months later, I stopped using it because in general, it was inferior to just finding information myself. Cursor was annoying, and it slowed me down more than it helped. GenAI was clearly a very good technical demo, but I didn&#39;t feel that it was actually making me any more productive.</p><p>The next moment where the constant, incessant, unavoidable hum of AI hype hit me was Claude Code (and everyone else, particularly in Silicon Valley it seems). Here was an &quot;agent&quot; (hate the term) who you could give a code problem to and without directing it to the files themselves, it would figure out what to do.</p><p>At launch, Claude Code was again very impressive. It was able to figure out what to do and where to do it, and I put a good bit of time into asking it to do my day-to-day work. The problem was that while it was good at finding the right files, and making a good effort at solving problems, it wasn&#39;t particularly good at solving problems <em>properly</em>, so I found I was doing as much cleanup as I was saving time with the computer writing the code. I pretty much gave up on Claude Code at some point last summer.</p><p>Then came the autumn, and a project arrived on my desk that had a few particularly gnarly challenges that I knew that I didn&#39;t really have the engineering aptitude for, even though I believed they would make <a href="https://ti.to">Tito</a> better. With a deadline fast approaching, I described the high-level problem to Claude Code and the recently launched Opus 4.3 (I think), and while the code it produced wasn&#39;t the prettiest, we delivered the project bug-free and ready to rock, on time. Something had shifted.</p><p>Since the arrival of Opus 4.5 a few months later, I haven&#39;t written a single line of code. I haven&#39;t talked publicly about it because I&#39;ve held some shame about it. The bait-and-switch non-profit to heavy-profit motives of OpenAI spooked me. The weird god-complexes of the leaders of some of these companies. The profession to be &quot;open&quot;, and &quot;ethical&quot;, but in reality being very closed, and selling technology that works some percentage of the time and then the other non-zero percentage of the time can delete your production database. It&#39;s all a bit shady. Some of my best friends have decided that AI is simply <a href="https://fr
+elancing-gods.com/2026/02/13/ai-is-bad">bad</a>, and <a href="https://writing.jan.io/2026/02/02/ai-veganism.html">not worth even looking at</a>.</p><p>I don&#39;t have those beliefs.</p><p>Nor, however, do I subscribe to the hype. There are people who believe that an AI takeover of the world is inevitable and would idly sit by as we become vassals run by people you probably wouldn&#39;t trust to mind your dog let alone your kids. There are people (including me) who are happily feeding all their data, connecting everything to these two US firms, just for <em>convenience</em>.</p><p>And I get it: speaking to a computer like a human and it responding is one of the most joyous ways to interact with a machine that I&#39;ve ever experienced. My whole life, I&#39;ve had to conform to how machines communicate, as programmed by someone who is not me. Now the machine conforms to how I communicate, and adapts to my preferences. It&#39;s science fiction in real life.</p><p>The past few weeks, I have gone very, very deep down the rabbit hole. I&#39;ve spent quite a lot pulling the slot machine lever and refining the output. (Not as much as <a href="https://bun.com/blog/bun-in-rust">some idiots</a>). The two themes of my lever pulling have been: &quot;if people insist on using AI, I want to see if I can uncover ways in which it can be used effectively, efficiently, and for the betterment of communities, not for individual gain&quot;. The other theme is: &quot;no engineer would be stupid enough to do this&quot;. I believe I have uncovered a lot of interesting ideas worth sharing. More on that later.</p><p>For today though, I&#39;m writing this in a text editor. I&#39;m about to feed it in to an LLM, and to the best of my knowledge, it will be published on my very new and very plain website at paulca.com.</p><p>The kicker is that doing that will not pass through any US-owned-or-controlled LLM provider. While Anthropic, and particularly Fable, remains best-in-class at software production and I have discovered a few tricks to make very nice software very efficiently, other open source models exist that can run very fast on hardware (ergo: GPUs) that until a few years ago would have ben considered commodity.</p><p>So that&#39;s all I have to say for now. A first blog post about AI, hand-written, but posted using a robot running in a home-office in South Dublin, powered by an open source model, where none of the data leaves my control or my jurisdiction without my consent, ironically landing on github.com, a company whose services I once loved dearly, made by people who became some of my closet friends, that I hope to soon leave behind and never look back.</p><p>Let&#39;s. Fucking. Go.</p>
+
+  </main>
+
+</article>
+
+
+      </main>
+    </div>
+  </body>
+</html>
