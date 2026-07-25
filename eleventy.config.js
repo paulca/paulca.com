@@ -1,4 +1,10 @@
+const markdownIt = require("markdown-it");
+
 module.exports = function (eleventyConfig) {
+  // Renders a front-matter string (e.g. a ledger prompt) as inline Markdown:
+  // links and `code` work, raw HTML stays escaped, no <p> wrapper.
+  const mdInline = markdownIt({ html: false });
+  eleventyConfig.addFilter("mdInline", (s) => mdInline.renderInline(s || ""));
   // Archives and site furniture, copied to the output byte-for-byte.
   eleventyConfig.addPassthroughCopy("src/posts");
   eleventyConfig.addPassthroughCopy("src/microblog");
@@ -28,9 +34,9 @@ module.exports = function (eleventyConfig) {
     })
   );
 
-  // Sum a numeric field across the ledger entries.
+  // Sum a numeric front-matter field across the ledger collection.
   eleventyConfig.addFilter("total", (entries, key) =>
-    entries.reduce((sum, e) => sum + e[key], 0)
+    entries.reduce((sum, e) => sum + (e.data[key] ?? 0), 0)
   );
 
   eleventyConfig.addGlobalData("buildDate", () => new Date());

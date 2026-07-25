@@ -13,13 +13,16 @@ Follow the recipes below exactly.
   the live site.
 - `src/blog/*.md` — blog posts, one Markdown file each. The filename is the
   URL slug: `src/blog/my-post.md` → `https://paulca.com/blog/my-post/`.
-- `src/_data/ledger.json` — data behind the prompt & carbon ledger at `/ai.html`.
+- `src/ledger/*.md` — the prompt & carbon ledger at `/ai.html`, one small
+  Markdown file per entry. `src/_data/ledger.json` holds only the prose
+  equivalent for the running total.
 - `src/_includes/base.njk` and `src/_includes/post.njk` — the only two HTML
   templates. `post.njk` wraps every blog post.
 - `src/index.njk` — homepage. The Writing list fills itself from `src/blog/`;
   you never need to edit the homepage when adding a post.
 - `src/ai.njk` — the ledger page template. The table and running total are
-  generated from `ledger.json`; you never edit this file to add an entry.
+  generated from the files in `src/ledger/`; you never edit this file to add
+  an entry.
 - `src/faq.md` — the FAQ.
 - `src/posts/`, `src/microblog/`, `src/assets/`, `src/activity_pub/` — frozen
   archives of the old site, copied into `docs/` unchanged. Never edit these.
@@ -33,8 +36,8 @@ Follow the recipes below exactly.
 2. **Never edit anything in `docs/` by hand.** Change `src/`, then rebuild.
 3. **Post Paul's words verbatim.** When Paul gives you text for a blog post,
    do not rewrite, correct, or embellish it.
-4. **The ledger is append-only.** Add new entries at the top; never rewrite or
-   delete old ones.
+4. **The ledger is append-only.** Add a new file under `src/ledger/`; never
+   edit or delete the existing entry files.
 5. **Every session that changes the site also adds a ledger entry**, in the
    same pull request as the change.
 6. **Always rebuild before committing**, and commit `src/` and `docs/`
@@ -82,33 +85,39 @@ run `npm run build`, add a ledger entry, then PR and merge.
 
 ## Recipe: update the prompt & carbon ledger
 
-Edit `src/_data/ledger.json`. Add one new object at the **top** of the
-`entries` array:
+Each entry is one small Markdown file in `src/ledger/`. Create a new file —
+never edit an existing one — named `YYYY-MM-DD-NN-slug.md`: today's date,
+then `NN`, a two-digit number one higher than the highest already used for
+that date (run `ls src/ledger/` to check; use `01` if the date is new), then
+two or three words about the change. Example: `2026-07-25-08-model-column.md`.
 
-    {
-      "date": "July 25, 2026",
-      "prompt_html": "“The instruction Paul gave, quoted verbatim.”",
-      "outcome_html": "One or two sentences describing what you did. Plain text, or simple HTML like <a href=\"...\">links</a> and <code>code</code>.",
-      "wh": 4,
-      "co2_g": 1.6,
-      "comparison": "A few minutes of a smartphone charging"
-    }
+    ---
+    model: GPT-OSS (RTX 3090)
+    wh: 4
+    co2_g: 1.6
+    comparison: A few minutes of a smartphone charging
+    prompt: >-
+      “The instruction Paul gave, quoted verbatim.”
+    ---
+    One or two sentences describing what you did, in Markdown.
 
+- `model`: the model doing the work — that is, you. Copy the value from your
+  previous entries unless the model has changed.
 - The arithmetic, for a local open-source model on the home GPU:
   `wh = (number of prompts Paul sent this session) × 2`, and
   `co2_g = wh × 0.4`. Round to one decimal at most.
 - `comparison` is a fresh everyday-energy equivalent for that amount of
-  energy. Vary it; don't reuse a comparison already in the file.
+  energy. Vary it; don't reuse a comparison from an existing entry.
+- The `prompt` text must stay indented under `prompt: >-` exactly as in the
+  example. Quotes inside it need no escaping.
 - The running total on the page computes itself. The `totals_comparison`
-  string at the top of the file is the prose equivalent for the *total*;
+  string in `src/_data/ledger.json` is the prose equivalent for the *total*;
   update it when the total has drifted well past what it describes.
-- JSON rules: double quotes inside strings must be escaped as `\"`;
-  no trailing commas.
 
-Then validate and rebuild:
+Then rebuild and confirm your entry made it into the page:
 
-    node -e "JSON.parse(require('fs').readFileSync('src/_data/ledger.json'))" && echo OK
     npm run build
+    grep "the comparison text from your new entry" docs/ai.html
 
 ## Recipe: open and merge the PR
 
@@ -130,6 +139,7 @@ If the merge fails because the branch is behind `main`, run
 - [ ] `npm run build` ran without errors after the last edit to `src/`
 - [ ] The change shows up in `docs/`
 - [ ] No new CSS, classes, or JavaScript anywhere
-- [ ] `src/_data/ledger.json` has a new entry and still parses
+- [ ] `src/ledger/` has a new entry file for this session, and its row shows
+      up in `docs/ai.html`
 - [ ] Nothing under `docs/` was edited by hand; nothing under the archive
       directories was touched
