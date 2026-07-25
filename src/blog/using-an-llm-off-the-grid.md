@@ -26,8 +26,8 @@ The past few weeks, I have gone very, very deep down the rabbit hole. I've spent
 
 For today though, I'm writing this in a text editor. I'm about to feed it in to an LLM, and to the best of my knowledge, it will be published on my very new and very plain website at paulca.com.
 
-The kicker is that doing that will not pass through any US-owned-or-controlled LLM provider. While Anthropic, and particularly Fable, remains best-in-class at software production and I have discovered a few tricks to make very nice software very efficiently, other open source models exist that can run very fast on hardware (ergo: GPUs) that until a few years ago would have ben considered commodity.
+The kicker is that doing that will not pass through any US-owned-or-controlled LLM provider. While Anthropic, and particularly Fable, remains best-in-class at software production and I have discovered a few tricks to make very nice software very efficiently, other open source models exist that can run very fast on hardware (ergo: GPUs) that until a few years ago would have been considered a commodity.
 
-So that's all I have to say for now. A first blog post about AI, hand-written, but posted using a robot running in a home-office in South Dublin, powered by an open source model, where none of the data leaves my control or my jurisdiction without my consent, ironically landing on github.com, a company whose services I once loved dearly, made by people who became some of my closet friends, that I hope to soon leave behind and never look back.
+So that's all I have to say for now. A first blog post about AI, hand-written, but posted using a robot running in a home-office in South Dublin, powered by an open source model, where none of the data leaves my control or my jurisdiction without my consent, ironically landing on github.com, a company whose services I once loved dearly, made by people who became some of my closest friends, that I hope to soon leave behind and never look back.
 
 Let's. Fucking. Go.
