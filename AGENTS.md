@@ -95,6 +95,8 @@ never edit an existing one — named `YYYY-MM-DD-NN-slug.md`: today's date,
 then `NN`, a two-digit number one higher than the highest already used for
 that date (run `ls src/ledger/` to check; use `01` if the date is new), then
 two or three words about the change. Example: `2026-07-25-08-model-column.md`.
+Get today's date by running `date +%F` — never guess it from memory; models
+frequently don't know what day it is.
 
     ---
     model: GPT-OSS (RTX 3090)
