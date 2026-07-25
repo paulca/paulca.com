@@ -106,8 +106,10 @@ two or three words about the change. Example: `2026-07-25-08-model-column.md`.
     ---
     One or two sentences describing what you did, in Markdown.
 
-- `model`: the model doing the work — that is, you. Copy the value from your
-  previous entries unless the model has changed.
+- `model`: the model doing the work — that is, you, the model reading this
+  file right now. If the latest entries name a different model, do **not**
+  copy them: write your own name and where you run, e.g.
+  `Qwen3-Coder 30B (Ollama)` or `GPT-OSS (RTX 3090)`.
 - The arithmetic, for a local open-source model on the home GPU:
   `wh = (number of prompts Paul sent this session) × 2`, and
   `co2_g = wh × 0.4`. Round to one decimal at most.
@@ -157,6 +159,11 @@ human in the repo and reviews the live site.
     git add -A
     git commit -m "Add blog post: <title>"        # or a one-line description of the tweak
     git push origin main
+
+Use `git add -A` exactly as written — never stage individual files. If your
+commit doesn't include the changed files under `docs/`, the live site will
+not change, no matter what you changed under `src/`. After committing, run
+`git show --stat HEAD` and check that `docs/` files are in it.
 
 Then verify the live site (GitHub Pages takes a minute or two to deploy):
 
