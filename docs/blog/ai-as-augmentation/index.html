@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI as augmentation &mdash; Paul Campbell</title>
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<nav><a href="/">← Home</a></nav>
+
+<article style="max-width:80ch">
+<header>
+<small>Paul Campbell • July 26, 2026</small>
+<h1>AI as augmentation</h1>
+</header>
+
+<p>One of the first &quot;oh shit&quot; moments for me wasn't when an AI customer support agent solved my problem (to date, I don't believe any AI agent has solved any problem I've reported). It was when it helped me do a better job of something than I wouldn't otherwise have been able to do or able to afford.</p>
+<p>Tito is an interesting case for this. Tito is a pretty healthy business that has grown well beyond our initial &quot;€20k per month so we can quit our jobs&quot; dreamline. But it hasn't grown so much that we can afford to hire anyone full-time, and that's been true for a number of years. The status quo is, for any piece of work: who will do it, and do we have time?</p>
+<p>There's a third intangible factor though: where do we stop polishing?</p>
+<p>Along with the enshittification of everything, gradually there has been a rising tide in expectations for how certain software works. Slowly enshittifying companies like GitHub, Stripe, and Revolut add delight to mundane things like pushing code, consuming APIs, and transferring money. And that's great!</p>
+<p>But for a small team, the rising tide isn't always &quot;download a library and it will be delightful&quot;. There's still layers and layers of work required to take any one feature and polish it until it shines. For a product as rich in features as Tito, that simply means: compromise.</p>
+<p>One such feature for me was webhooks. Tito Classic has supported webhooks since almost day one (fun aside: in 2007 I attended something in California called &quot;Super Happy Dev House&quot;, where one of the talks was about this idea that some guy had to allow web apps to send messages and &quot;hook&quot; into other web apps).</p>
+<p>Webhooks are very clever, and very useful, but in general, the tooling around them is very bad. Most of my use of webhooks ends up just pushing buttons, catching the webhook somewhere, tweaking some code, and doing that over and over until things just about work.</p>
+<p>Tito Classic's webhooks are very much borne of that &quot;hack until it works&quot; philosophy: Did the webhook send? Can I trigger a new one easily? Can I inspect the payload sender-side without catching it? Is the schema webhook-specific or does it match the REST API?</p>
+<p>When it came to implementing webhooks in Tito Pro last year, with agentic assistance (who names this shit?), I was able to keep going on the webhooks feature until it had all the attributes that I would expect a webhook implementation to have of a service I expect. Pro's webhook implementation features previews, retries, logs, and the webhook schema exactly matches the API schema: in fact they're derived from the same implementation, so in theory they will never drift.</p>
+<p>That was my first &quot;oh shit&quot; moment, with receipts. I built the Tito Classic webhooks implementation in 2016, and when it was &quot;good enough&quot;, I dropped it and moved on to the next thing. The programming tools I had available didn't really change between 2015 and 2025, so it was fairly like for like. What changed was my ability to keep iterating without burning out, without getting distracted by another challenge, and without procrastinating on doing something because it was &quot;too hard&quot;.</p>
+<p>When working assisted allows me to a better version of myself and to close the gap between what I intend to do and what I end up doing, it's very hard to go back to working unassisted.</p>
+
+</article>
+
+
+</body>
+</html>
