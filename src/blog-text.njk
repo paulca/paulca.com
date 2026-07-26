@@ -1,0 +1,13 @@
+---
+pagination:
+  data: collections.blog
+  size: 1
+  alias: post
+permalink: "/blog/{{ post.page.fileSlug }}.text"
+eleventyExcludeFromCollections: true
+---
+# {{ post.data.title | safe }}
+
+Paul Campbell • {{ post.date | longDate }}
+
+{{ post.rawInput | safe }}

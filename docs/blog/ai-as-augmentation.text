@@ -1,0 +1,27 @@
+# AI as augmentation
+
+Paul Campbell • July 26, 2026
+
+
+One of the first "oh shit" moments for me wasn't when an AI customer support agent solved my problem (to date, I don't believe any AI agent has solved any problem I've reported). It was when it helped me do a better job of something than I wouldn't otherwise have been able to do or able to afford.
+
+Tito is an interesting case for this. Tito is a pretty healthy business that has grown well beyond our initial "€20k per month so we can quit our jobs" dreamline. But it hasn't grown so much that we can afford to hire anyone full-time, and that's been true for a number of years. The status quo is, for any piece of work: who will do it, and do we have time?
+
+There's a third intangible factor though: where do we stop polishing?
+
+Along with the enshittification of everything, gradually there has been a rising tide in expectations for how certain software works. Slowly enshittifying companies like GitHub, Stripe, and Revolut add delight to mundane things like pushing code, consuming APIs, and transferring money. And that's great!
+
+But for a small team, the rising tide isn't always "download a library and it will be delightful". There's still layers and layers of work required to take any one feature and polish it until it shines. For a product as rich in features as Tito, that simply means: compromise.
+
+One such feature for me was webhooks. Tito Classic has supported webhooks since almost day one (fun aside: in 2007 I attended something in California called "Super Happy Dev House", where one of the talks was about this idea that some guy had to allow web apps to send messages and "hook" into other web apps).
+
+Webhooks are very clever, and very useful, but in general, the tooling around them is very bad. Most of my use of webhooks ends up just pushing buttons, catching the webhook somewhere, tweaking some code, and doing that over and over until things just about work.
+
+Tito Classic's webhooks are very much borne of that "hack until it works" philosophy: Did the webhook send? Can I trigger a new one easily? Can I inspect the payload sender-side without catching it? Is the schema webhook-specific or does it match the REST API?
+
+When it came to implementing webhooks in Tito Pro last year, with agentic assistance (who names this shit?), I was able to keep going on the webhooks feature until it had all the attributes that I would expect a webhook implementation to have of a service I expect. Pro's webhook implementation features previews, retries, logs, and the webhook schema exactly matches the API schema: in fact they're derived from the same implementation, so in theory they will never drift.
+
+That was my first "oh shit" moment, with receipts. I built the Tito Classic webhooks implementation in 2016, and when it was "good enough", I dropped it and moved on to the next thing. The programming tools I had available didn't really change between 2015 and 2025, so it was fairly like for like. What changed was my ability to keep iterating without burning out, without getting distracted by another challenge, and without procrastinating on doing something because it was "too hard".
+
+When working assisted allows me to a better version of myself and to close the gap between what I intend to do and what I end up doing, it's very hard to go back to working unassisted.
+
