@@ -1,6 +1,20 @@
 const markdownIt = require("markdown-it");
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
+  // RSS feed of the blog, generated at build time.
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss",
+    outputPath: "/feed.xml",
+    collection: { name: "blog", limit: 0 },
+    metadata: {
+      language: "en",
+      title: "Paul Campbell",
+      subtitle: "Writing from Paul Campbell.",
+      base: "https://paulca.com/",
+      author: { name: "Paul Campbell", email: "paul@rslw.com" },
+    },
+  });
   // Renders a front-matter string (e.g. a ledger prompt) as inline Markdown:
   // links and `code` work, raw HTML stays escaped, no <p> wrapper.
   const mdInline = markdownIt({ html: false });

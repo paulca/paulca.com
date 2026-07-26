@@ -20,6 +20,10 @@ Follow the recipes below exactly.
   templates. `post.njk` wraps every blog post.
 - `src/index.njk` — homepage. The Writing list fills itself from `src/blog/`;
   you never need to edit the homepage when adding a post.
+- `src/blog-text.njk` and the RSS plugin (configured in `eleventy.config.js`)
+  generate a plain-Markdown `/blog/<slug>.text` twin for every post and the
+  feed at `/feed.xml`. Both are automatic — adding a post needs no extra
+  work, and you never edit these.
 - `src/ai.njk` — the ledger page template. The table and running total are
   generated from the files in `src/ledger/`; you never edit this file to add
   an entry.

@@ -6,6 +6,7 @@
 <title>Prompt &amp; carbon ledger &mdash; Paul Campbell</title>
 <link rel="icon" href="/icon.png" type="image/png">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Paul Campbell" href="/feed.xml">
 </head>
 <body>
 
@@ -28,6 +29,19 @@ the AI work cost. Newest first.</p>
   <th>Est. energy</th>
   <th>Est. CO&#8322;e</th>
   <th>Roughly equivalent to</th>
+</tr>
+<tr>
+  <td>July 26, 2026</td>
+  <td>Claude Fable 5</td>
+  <td>“Can I get: an automatically generated RSS feed by Eleventy? A <code>.text</code> version that just shows the post in plain markdown e.g. https://paulca.com/blog/ai-as-augmentation.text”</td>
+  <td><p>Added an RSS feed at <a href="/feed.xml">/feed.xml</a> via the official Eleventy RSS
+plugin, and a plain-Markdown twin for every post: <code>/blog/&lt;slug&gt;.text</code>
+serves the post's source. Both generate automatically at build time, so
+adding a post keeps needing nothing beyond the Markdown file.</p>
+</td>
+  <td>~8 Wh</td>
+  <td>~3.2 g</td>
+  <td>Four hours of a doorbell transformer</td>
 </tr>
 <tr>
   <td>July 26, 2026</td>
@@ -337,9 +351,9 @@ Pages. About 40 model invocations.</p>
 </tr>
 </table>
 
-<p><b>Running total:</b> ~211 Wh,
-~84 g CO&#8322;e &mdash;
-just shy of the energy it takes to boil two litres of water, or the emissions of driving a petrol car about 450 metres.</p>
+<p><b>Running total:</b> ~219 Wh,
+~87 g CO&#8322;e &mdash;
+a bit more than the energy it takes to boil two litres of water, or the emissions of driving a petrol car about half a kilometre.</p>
 
 <h2>Method</h2>
 
