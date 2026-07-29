@@ -3,4 +3,44 @@ title: Memories of Glen Hansard
 date: 2026-07-29
 ---
 
+Memories of Glen Hansard
+
+Originally posted on [Mastodon](https://mastodon.social/@paulca/117004209122068404)
+
 I have so many Glen Hansard memories, even though they're all from 20–30 years ago.
+
+I remember the first Frames show I ever saw. It was in Whelan's in Dublin. Tiny venue, perfect place to see a band for the first time. It was around about the time of their second album.
+
+Glen got on stage and for 2 hours I was mesmerised. I had been to plenty of live shows before but I didn't know that live music could be LIKE THIS. They were always a live band first and a recording band second, and the difference was Glen's presence on stage.
+
+I remember seeing them in Simon's café, all of us tucked in like sardines. There was a chap next to me with a guitar that I had a nice little chat with. Midway through the set, Glen called out "is Damien Rice here?" and the nice chap next to me leapt on stage and delivered the most energetic version of "I've Got You Back" by the Jackson Five.
+
+I remember at a show in Vicar Street, by then I'd listened to all of their stuff and knew the words to most of their songs.
+
+At one point, Glen nodded to the band and the people doing the sound. The lights fell on him and they _turned off all the mics and speakers_.
+
+He played a song to the full theatre, 1,500 of us, just us, in silence and awe, his amazingly dinged up guitar, and his voice. I'm kinda shivering just thinking about it.
+
+Another show in Vicar Street, New Year's Eve, 2001. Glen led tribute to Mic Christopher, who had died a month earlier. I didn't know Mic's music before that, but I sang along to "Heydey" with everyone else.
+
+And just reading that Glen dedicated every album since to Mic. 🍺
+
+I remember seeing them at Pukkelpop in Belgium, 2006 maybe.
+
+Glen had us all sing the "la da" part of "Falling Slowly”, before anyone knew the song. We were happy to oblige. It was a huge moment.
+
+And then he went and won a fucking Oscar for that song when it was in Once.
+
+I remember feeling sad and confused when rumours spread about his relationship with Markéta Irglová, and relief to hear an interview with her that she only wished him well.
+
+I can only hope that whatever happened was worth those well wishes.
+
+The final memory is the saddest of all. When I heard the opening drum beat of "Lay me down” and the guitar that comes in, I melted inside and something changed: that a pop song could be so expressive, so close, so personal, so Dublin.
+
+And now here we are, his son is gonna have to listen to these lines for the rest of his life, and never get to know the joy that we knew. Such poetic cruelty.
+
+RIP.
+
+Lay me down In the hollowed ground
+Where my father waits, I will stay
+So lay me down
