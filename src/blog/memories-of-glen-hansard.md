@@ -3,8 +3,6 @@ title: Memories of Glen Hansard
 date: 2026-07-29
 ---
 
-Memories of Glen Hansard
-
 Originally posted on [Mastodon](https://mastodon.social/@paulca/117004209122068404)
 
 I have so many Glen Hansard memories, even though they're all from 20–30 years ago.
