@@ -1,0 +1,38 @@
+# Platonic ideals of technology
+
+Paul Campbell • October 4, 2026
+
+Over time, I've developed a bunch of platonic ideals of interacting with software. Some of them I experienced for brief moments of perfection, before the slow-then-fast creep of enshittification.
+
+My platonic ideal for a device, after going back-and-forth with this for a long time, is running a local copy of programmes and files that exist outside of the device. If I get a new device, I should be able to log in securely to _something_, and all my apps, files, and preferences are just there, ideally pulled from a data-store that I either control, or is encrypted with a key that only I have.
+
+My platonic ideal for an operating system is probably something that feels like Mac OS, but maybe like Snow Leopard era Mac OS, where there was this nice balance of design and functionality, everything felt snappy, and most of the OS embodied the "just works" philosophy that Apple is supposed to represent.
+
+For email, I want the comfort of knowing that nobody can read my messages, combined with the convenience, power, and "just fill it with messages and we’ll figure out the storage" of Gmail. I self-hosted my email for years before Gmail came along, and at the time, fighting spam was a constant whack-a-mole of various clunky techniques. Gmail essentially made spam go away in one-fell-sweep. In this AI age, spam is coming back, and I want a way to tell it to fuck off again.
+
+For documents, I want something like the glory days of Windows 95 where your files were on your computer, but again with the convenience of Google Workspace for sharing across devices and teams. While I'm still on Mac, I want proper native apps, but I don't want to be locked in to Apple’s ecosystem for filestorage and sharing. And these tools aren't doing anything more than they did in 1995: typing words onto pages. These apps should be some of the fastest apps I use, yet all of Google Docs, Microsoft Office, and Apple's productivity apps are slow: slow to load native apps and slow to load on the web. Urgh.
+
+Across all my documents, I want a way to get early-Google levels of search. Google was able to search the entire web in milliseconds in 2007 or whenever it was and find the most mundane needles in the haystack of every web site. I want that for my own files and emails. Computers are fast, search has come on a lot since then, and the pile of documents I rely on is a lot less than the entire internet, even in 2007!
+
+For social, I want apps where I'm in more control of my data. I've got sick of participating in networks where other people control the stack that I post on to. Like many, Twitter around 2019 was heading toward my platonic ideal, but led me to never trust a corporation with this stuff. Mastodon is inspirational to me, but it feels like just lots of smaller versions of Twitter (in the sense I have to trust the server admin), and it seems like it's just too confusing for a lot of people. I don't like email addresses as handles, because I expect email addresses to be email addresses. BlueSky has a weird provenance, and it feels centralised in a corporate sense. AT Proto seems cool, but I feel like BlueSky wants me to think about the protocol too much when I'm using it. I also don't like URLs as handles. If I put a URL into a browser, I should get a webpage, and if I'm at-replying someone with a URL, I expect a strong correllation with the URL and that profile.
+
+Instead of Facebook, I want a box like a Raspberry Pi or something that I can invite my friends and family to. But it shouldn't be clunky. There should be a delightful app that they can log in to and my stuff just shows up alongside any other FaceBoxes they're using.
+
+I want OG Instagram back, where I could just log in and see snapshots of my friends lives through carefully curated pictures and nice comments. I don't want to be sold to or influenced, at least not unless I ask to be.
+
+Across all these services, I want to know that my data is my data, and what I choose to keep private is actually private, even from the people operating the services. I want to know that I own what I choose to make public, even if it’s public!
+
+When I sign in to any service, be it an airline, or a bank, or a a mobile provider, I want things to be _fast_. I'm so tired by years and years of these websites getting slower and slower. I want upsells to be subtle and not in my face. For any static data, I don't want to see a loader. Loaders for anything I request that does work, but I expect anything that a system needs to fetch from another system to be cached, and I should see it instantly: balances, booking details, bills etc.
+
+I don't want to enter my card details into every service that’s charging me money, but I do want each service to have different details so that I can revoke access at any point to any service at any time.
+
+Same for mailing lists: I never want to have to unsubscribe from a mailing list or any kind of bulk delivery. I want to switch off ability for someone to send me a message using _my_ mailing software, not trust that they'll remove my details from theirs.
+
+I want all of the apps to have APIs, and CLIs, and ultimately be able to connect to whatever automation layers I put in place, whether that be LLM-assisted or otherwise.
+
+Speaking of AI, I want the majority of my inference to be local, either local to the machine I'm working on, or running on servers at the very least local to where I live.
+
+I want to be able to choose between renting compute and running it myself. I never want to feel like I'm locked in to a single vendor for anything, but I don't want to pay a UX price for working with non-locked systems.
+
+Is this all too much to ask?
+
